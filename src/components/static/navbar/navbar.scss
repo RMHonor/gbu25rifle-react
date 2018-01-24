@@ -1,0 +1,28 @@
+.navbar {
+  display: flex;
+  padding: 0;
+
+  @media (max-width: 768px) {
+    margin-top: 200px;
+  }
+
+  li {
+    flex: 1;
+    list-style: none;
+  }
+
+  &__link {
+    display: block;
+    background-color: #192A3E;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+
+    &:hover, &--active {
+      font-weight: 700;
+      background-color: #3a6392;
+    }
+  }
+}

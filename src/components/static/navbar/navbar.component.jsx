@@ -1,18 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import { routes } from '../../../routes';
 
 import './navbar.scss';
 
 export default () => (
-  <nav className='navbar'>
-    <ul>
+  <nav>
+    <ul className="navbar">
       {routes.map(route => (
         <li key={route.path}>
-          <Link to={route.path}>
+          <NavLink to={route.path} className="navbar__link" activeClassName="navbar__link--active">
             {route.text}
-          </Link>
+          </NavLink>
         </li>
       ))}
     </ul>
