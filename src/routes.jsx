@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 
 import Home from './containers/home/home.component';
 import Team from './containers/team/team.component';
+import News from './containers/news/news.component';
+import History from './containers/history/history.component';
 
 export const routes = [
   {
@@ -14,6 +16,16 @@ export const routes = [
     path: '/team',
     text: 'Team',
     component: Team,
+  },
+  {
+    path: '/news',
+    text: 'News',
+    component: News,
+  },
+  {
+    path: '/history',
+    text: 'History',
+    component: History,
   },
 ];
 
