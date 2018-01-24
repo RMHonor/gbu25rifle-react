@@ -1,14 +1,13 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom'
 
 import Home from './containers/home/home.component';
 import Team from './containers/team/team.component';
 
 export const routes = [
   {
-    path: '/',
+    path: '/home',
     text: 'Home',
-    exact: true,
     component: Home,
   },
   {
@@ -25,6 +24,7 @@ export default ({ children }) => (
       {routes.map(route => (
         <Route exact={route.exact} path={route.path} component={route.component} key={route.path} />
       ))}
+      <Route exact path="/" render={() => <Redirect to={routes[0].path} />} />
     </div>
   </Router>
 );
