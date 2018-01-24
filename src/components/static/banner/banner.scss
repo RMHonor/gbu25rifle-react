@@ -1,5 +1,7 @@
 .banner {
+
   margin: 0 auto;
+
   &__heading {
     font-weight: 700;
     font-size: 2.25rem;
@@ -22,11 +24,10 @@
   }
 
   @media (max-width: 768px) {
-    position: relative;
 
     &__image, &__heading {
       position: absolute;
-      top: 0;
+      top: 10px;
       left: 0;
       width: 100%;
       text-align: center;
