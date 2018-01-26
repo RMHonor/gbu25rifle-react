@@ -1,0 +1,35 @@
+.home {
+  &.grid {
+    width: 100%;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, [col-start] 1fr);
+  }
+
+  & > * {
+    padding: 10px;
+  }
+
+  .intro, .quick-updates {
+    grid-column: 1 / 3;
+  }
+
+  .sponsorship, .facebook {
+    grid-column: 3;
+  }
+
+  .sponsorship {
+    grid-row: 1;
+  }
+
+  .facebook {
+    grid-row: 2;
+  }
+
+  .intro {
+
+    img {
+      float: right;
+      width: 25%;
+    }
+  }
+}
