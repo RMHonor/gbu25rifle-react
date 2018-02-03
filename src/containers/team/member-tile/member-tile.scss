@@ -1,0 +1,55 @@
+.member-tile {
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s;
+
+  img {
+    padding: 5px;
+  }
+
+  &__name {
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  &__position {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &:hover {
+    background-color: #bac2cc;
+  }
+}
+
+.member-modal {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  right: 40px;
+  bottom: 40px;
+  border: 1px solid rgb(204, 204, 204);
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  padding: 20px;
+
+  &__name {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2rem;
+  }
+
+  &__position {
+    margin-top: 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  &__image {
+    float: left;
+    width: 25%;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+  }
+}
