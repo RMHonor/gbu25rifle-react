@@ -24,5 +24,9 @@
       font-weight: 700;
       background-color: #3a6392;
     }
+
+    &--active {
+      pointer-events: none;
+    }
   }
 }
