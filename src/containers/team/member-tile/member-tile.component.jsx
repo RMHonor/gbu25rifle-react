@@ -16,8 +16,6 @@ export default class MemberTile extends Component {
   }
 
   toggle() {
-    document[this.state.isOpen ? 'removeEventListener' : 'addEventListener']('keyup', this.toggle);
-
     this.setState({
       isOpen: !this.state.isOpen,
     });
@@ -34,12 +32,14 @@ export default class MemberTile extends Component {
         <Modal
           isOpen={this.state.isOpen}
           appElement={document.querySelector('#app')}
-          // className="member-modal"
+          onRequestClose={this.toggle}
+          className="member-modal"
         >
           <img src={image} alt={name} className="member-modal__image"/>
           <h2 className="member-modal__name">{name}</h2>
           <h3 className="member-modal__position">{position}</h3>
           <p className="member-modal__about">{about}</p>
+          <button onClick={this.toggle} type="button">Close</button>
         </Modal>
       </div>
     );
